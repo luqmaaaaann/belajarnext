@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default async function Page({ params }) {
@@ -16,7 +17,7 @@ export default async function Page({ params }) {
           Back to Todolist
         </Link>
         <Link href={`/todos/${id}/edit`}>
-          <button className="w-fit">Edit Todo</button>
+          <Button className="w-fit">Edit Todo</Button>
         </Link>
       </div>
     </main>

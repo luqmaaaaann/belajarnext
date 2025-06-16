@@ -29,6 +29,7 @@ export async function createTodoAction(_, formData) {
   };
 }
 
+//machine to delete action
 export async function deleteTodoAction(formData) {
   const todoId = formData.get("id");
 

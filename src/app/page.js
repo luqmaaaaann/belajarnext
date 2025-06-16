@@ -1,4 +1,5 @@
 import { CreateForm, DeleteForm } from "@/components/form";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default async function Home() {
@@ -17,13 +18,17 @@ export default async function Home() {
               <div className="text-lg font-medium">{todo.title}</div>
               <div>{todo.content}</div>
               <div className="flex gap-2">
-                <Link
-                  href={`/todos/${todo._id}`}
-                  className="bg-indigo-500 text-white p-2 rounded-lg"
+                <Button
+                  asChild
+                  className="bg-indigo-500 text-white px-4 py-1 rounded-lg font-normal hover:bg-indigo-900"
                 >
-                  View Details
-                </Link>
-                <DeleteForm id={todo._id} />
+                  <Link href={`/todos/${todo._id}`}>View Details</Link>
+                </Button>
+
+                <DeleteForm
+                  className="bg-red-600 text-white px-12 py-2 rounded-lg"
+                  id={todo._id}
+                />
               </div>
             </div>
           );
