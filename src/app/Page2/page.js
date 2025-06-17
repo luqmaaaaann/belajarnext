@@ -1,8 +1,8 @@
-import { CreateForm, DeleteForm } from "@/components/form";
+import { CreateForm, DeleteForm } from "@/app/todos/[id]/form";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default async function Home() {
+export default async function Page() {
   //server side
   const res = await fetch("https://v1.appbackend.io/v1/rows/SW0N9gnpdfYB");
   const datacoba = await res.json();
